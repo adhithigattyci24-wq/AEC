@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Tasks</title>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#box{
+width: 100px;
+height:100px;
+background-color:lightblue;
+margin-top:20px;
+position:relative;
+}
+p,ul{font-size:18px;}
+button {padding:8px 14px;margin:5px;}
+</style>
+</head>
+<body>
+<h2>jQuery Example</h2>
+<p id="para">This is an existing paragraph.</p>
+<ul id="list">
+<li>Existing item 1</li>
+<li>Existing item 2</li>
+</ul>
+<button id="appendBtn">Append Content</button>
+<button id="animateBtn">Animate Box</button>
+<div id="box"></div>
+<script>
+$(document).ready(function(){
+//(a)Append content to paragraph and list
+$("#appendBtn").click(function(){
+$("#para").append("<b>New content added to paragraph.</b>");
+$("#list").append("<li>New list item added</li>");
+});
+//(b) Animate the div and (c) change its color
+$("#animateBtn").click(function(){
+$("#box").animate({
+left:"200px",
+height:"150px",
+width:"150px",
+},1000,function(){
+//(c)Change color after animation completes
+$("#box").css("background-color","lightgreen");
+});
+});
+});
+</script></body></html>

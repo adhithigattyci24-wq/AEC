@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Table</title>
+  <style>
+    body {
+           font-family: Arial, sans-serif;
+           background-color: #f5f6fa;
+           margin: 40px;
+         }
+    h1 {
+         text-align: center;
+         color: #2c3e50;
+       }
+    table {
+             border-collapse: collapse;
+             width: 100%;
+             text-align: center;
+             box-shadow: 0 0 10px #aaa;
+          } 
+    th, td {
+              border: 1px solid#2c3e50;
+              padding: 10px;
+           }
+    th {
+          background-color: #273c75;
+          color: white;
+       }
+    tfoot td {
+                background-color: #dcdde1;
+                font-weight: bold;
+             }
+    /*Row colors*/
+    tr:nth-child(even) {
+                          background-color: #f1f2f6;
+                       }
+    tr:nth-child(odd) {
+                          background-color: #f9f9f9;
+                       }
+    /*Highlight lab and elective hours*/
+    .lab {
+           background-color: #ffeaa7;/*yellow*/
+           font-weight: bold;
+         }
+    .elective {
+                 background-color: #81ecec;/*light blue*/
+                 font-weight: bold;
+              }
+    .break {
+             background-color: #fab1a0;
+             font-weight: bold; 
+           }
+  </style>
+</head>
+<body>
+  <h1>Class Time Table</h1>
+
+  <table>
+    <!--Table Header-->
+    <thead>
+       <tr>
+          <th>Day / Time</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:00 - 11:15</th>
+          <th>11:15 - 12:15</th>
+          <th>12:15 - 1:15</th>
+          <th>1:15 - 2:00</th>
+          <th>2:00 - 3:00</th>
+          <th>3:00 - 4:00</th>
+    </thead>
+
+    <!--Table Body-->
+    <tbody>
+       <tr>
+          <td><b>Monday</b></td>
+          <td>Maths</td>
+          <td>Physics</td>
+          <td class="break" rowspan="6">Break</td>
+          <td class="lab" colspan="2">Java Lab</td>
+          <td rowspan="6" class="break">Lunch</td>
+          <td>English</td>
+          <td>Sports</td>
+       </tr>
+
+       <tr>
+          <td><b>Tueday</b></td>
+          <td>Chemistry</td>
+          <td>Maths</td>
+          <td>Computer Science</td>
+          <td>Library</td>
+          <td class="elective" colspan="2">Elective-IOT</td>
+       </tr>
+
+       <tr>
+          <td><b>Wednesday</b></td>
+          <td class="lab" colspan="2">Database Lab</td>
+          <td>Physics</td>
+          <td>Maths</td>
+          <td>Electronics</td>
+          <td>Chemistry</td>
+       </tr>
+       <tr>
+          <td><b>Thursday</b></td>
+          <td>Computer Science</td>
+          <td>OOPC</td>
+          <td>Database</td>
+          <td>Maths</td>
+          <td>English</td>
+          <td>Electronics</td>
+       </tr>
+
+       <tr>
+          <td><b>Friday</b></td>
+          <td>Database</td>
+          <td>OOPC</td>
+          <td class="lab" colspan="2">OOPC Lab</td>
+          <td>Physics</td>
+          <td>Maths</td>
+          
+       </tr>
+
+       <tr>
+          <td><b>Saturday</b></td>
+          <td class="elective" colspan="2">Elective-IOT</td>
+          <td>OOPC</td>
+          <td>Electronics</td>
+       </tr>
+     </tbody>
+
+     <!--Table Footer-->
+     <tfoot>
+        <tr>
+           <td colspan="9">*Lab hours and electives are highlighted with special colors.</td>
+        </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

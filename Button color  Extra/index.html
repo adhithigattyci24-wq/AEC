@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Change Color</title>
+<style>
+    body {
+           font-family: Arial, sans-serif;
+           background-color: #f5f6fa;
+           margin: 40px;
+         }
+    h1 {
+         text-align: center;
+         color: #2c3e50;
+       }
+    table {
+             border-collapse: collapse;
+             width: 100%;
+             text-align: center;
+             box-shadow: 0 0 10px #aaa;
+          } 
+    th, td {
+              border: 1px solid#2c3e50;
+              padding: 10px;
+           }
+    th {
+          background-color: #273c75;
+          color: white;
+       }
+    tfoot td {
+                background-color: #dcdde1;
+                font-weight: bold;
+             }
+    /*Row colors*/
+    tr:nth-child(even) {
+                          background-color: #f1f2f6;
+                       }
+    tr:nth-child(odd) {
+                          background-color: #f9f9f9;
+                       }
+    /*Highlight lab and elective hours*/
+    .lab {
+           background-color: #ffeaa7;/*yellow*/
+           font-weight: bold;
+         }
+    .elective {
+                 background-color: #81ecec;/*light blue*/
+                 font-weight: bold;
+              }
+    .break {
+             background-color: #fab1a0;
+             font-weight: bold; 
+           }
+  </style>
+<script src="changeColor.js"></script>
+</head>
+<body>
+<table>
+<tbody>
+<tr>
+<td><button onclick="greenColor()">Green</button></td>
+<td><button onclick="blueColor()">Blue</button></td>
+<td><button onclick="yellowColor()">Yellow</button></td>
+</tr>
+
+<tr>
+<td><button onclick="greyColor()">Grey</button></td>
+<td><button onclick="pinkColor()">Pink</button></td>
+<td><button onclick="orangeColor()">Orange</button></td>
+</tr>
+
+<tr>
+<td><button onclick="brownColor()">Brown</button></td>
+<td><button onclick="redColor()">red</button></td>
+<td><button onclick="indigoColor()">Indigo</button></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
