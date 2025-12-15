@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <title>Full Name Display</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
@@ -9,7 +9,7 @@
 First Name:<input type="text" ng-model="firstName"><br><br>
 Last Name:<input type="text" ng-model="lastName"><br><br>
 <h3>Your Full Name:</h3>
-<p>{{ firstName+""+lastName }}</p>
+<p>{{ firstName+" "+lastName }}</p>
 <script>
 var app=angular.module("myApp",[]);
 app.controller("nameController",function($scope){
